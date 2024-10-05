@@ -4,16 +4,14 @@ const startBtn = document.getElementById("startBtn");
 const form = document.getElementById("myForm");
 
 const winningConditions = [
-    [1,2,3]
-    [4,5,6]
-    [7,8,9]
-    
-    [1,4,7]
-    [2,5,8]
-    [3,6,9]
-
-    [1,5,9]
-    [3,5,7]
+    [1,2,3],
+    [4,5,6],
+    [7,8,9],
+    [1,4,7],
+    [2,5,8],
+    [3,6,9],
+    [1,5,9],
+    [3,5,7],
 ];
 
 newBtn.addEventListener("click", () => {
@@ -69,3 +67,21 @@ function playMove(cubes, data) {
 };
 
 function endConditions(data) {
+    if(checkWinner(data)) {
+        return true
+    } else if (data.round ===9) {
+        return true
+    }
+    return false
+};
+
+function checkWinner(data) {
+    let result = false;
+    winningConditions.forEach(condition => {
+        if(data.board[condition[0]] === data.board[condition[1]] && data.board[condition[1]] === data.board[condition[2]]) {
+            data.gameOver = true;
+            result = true;
+        } 
+    })
+    return result;
+};
