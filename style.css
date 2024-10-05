@@ -14,6 +14,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: #48628c;
+    font-family: "Matcha";
+}
+
+text {
+    color: white;
 }
 
 .title {
@@ -81,6 +86,7 @@ body {
   border: #5E5DF0 solid 2.5px;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+  color: white;
 }
 
 .cubes:hover {

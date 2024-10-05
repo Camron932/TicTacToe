@@ -3,6 +3,19 @@ const formId = document.getElementById("formId");
 const startBtn = document.getElementById("startBtn");
 const form = document.getElementById("myForm");
 
+const winningConditions = [
+    [1,2,3]
+    [4,5,6]
+    [7,8,9]
+    
+    [1,4,7]
+    [2,5,8]
+    [3,6,9]
+
+    [1,5,9]
+    [3,5,7]
+];
+
 newBtn.addEventListener("click", () => {
     formId.classList.remove("hidden");
 });
@@ -39,5 +52,20 @@ function initializeGame(data) {
 };
 
 function playMove(cubes, data) {
-    
+    if(data.gameOver || data.round > 8) {
+        return
+    }
+    if(data.board[cubes.id] === "X" || data.board[cubes.id] === "O") {
+    return
+    }
+
+    data.board[cubes.id] = data.currentPlayer;
+    cubes.textContent = data.currentPlayer;
+    cubes.classList.add(data.currentPlayer === "X" ? "player1" : "player2");
+    data.round++;
+
+    if(endConditions(data)) {
+    }
 };
+
+function endConditions(data) {
