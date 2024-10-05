@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "Matcha";
+    src: url(fonts/Matcha-EaLge.ttf);
+}
+
+@font-face {
+    font-family: "likeThat";
+    src: url(fonts/likethat-font.zip);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #48628c;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-family: "Matcha";
+    color: white;
+}
+
+.gameControls {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+  background: #5E5DF0;
+  border-radius: 999px;
+  box-shadow: #5E5DF0 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: "likeThat";
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin: 15px;
+}
+
+.gameWrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 18px;
+    height: 25vw;
+    width: 25vw;
+}
+
+.cubes {
+    width: auto;
+  height: auto;
+  min-width: 30px;
+  min-height: 30px;
+  border-radius: 1rem;
+  font-size: max(4vw, 3rem);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding-left: 1.6vw;
+  border: #5E5DF0 solid 2.5px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.cubes:hover {
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 900px) {
+.gameWrapper {
+    width: 100vw;
+}
+.gameboard {
+    width: auto;
+}
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.formWrapper {
+    display: flex;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    margin-top: -16em;
+    margin-left: -16em;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #5E5DF0;
+    padding: 18px;
+    border-radius: 15px;
+    width: 32em;
+    height: 32em;
+    border: white 3px solid;
+    font-family: "likeThat";
+}
+
+.inputField {
+    display: flex;
+    font-size: 24px;
+    width: 12em;
+    padding-bottom: 3rem;
+    align-items: center;
+  }
+  .formClass {
+    height: 1em;
+    margin-left: 2rem;
+    background-color: rgba(201, 201, 201, 0.678);
+    border: 0.1rem solid #fff;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    color: black;
+    font-size: 18px;
+    width: 12em;
+  }
+  .input-label, .Title {
+    min-width: 70%;
+    color: white;
+  }
+  .radio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 200px;
+  }
+  
+  input[type="radio"] {
+    border: 0px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 2rem;
+  }
+  
+  .startButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 200px;
+    outline: none;
+    background-color: rgba(201, 201, 201, 0.678);
+    border: 0.1rem solid #fff;
+    border-radius: 1rem;
+    color: rgb(18, 64, 26);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "likeThat";
+    color: white;
+  }
+  .startButton:hover {
+    cursor: pointer;
+  }
