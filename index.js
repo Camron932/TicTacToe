@@ -12,5 +12,8 @@ form.addEventListener('submit', (event) =>{
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     formId.classList.remove("hidden");
-    console.log(data);
+    initializeGame(data)
 })
+
+function initializeGame(data) {
+    
