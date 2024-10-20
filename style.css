@@ -21,12 +21,19 @@ text {
     color: white;
 }
 
-.title {
+.title, .displayTurn {
     display: flex;
     justify-content: center;
-    font-size: 48px;
     font-family: "Matcha";
     color: white;
+}
+
+.title {
+    font-size: 48px;
+}
+
+.displayTurn {
+    font-size: 24px;
 }
 
 .gameControls {
@@ -63,6 +70,18 @@ text {
     width: 100%;
 }
 
+.modal {
+display: flex;
+position: fixed; 
+z-index: 1; 
+left: 0;
+top: 0;
+width: 100%;
+overflow: auto;
+height: fit-content;
+font-size: max(5vh, 20px);
+}
+
 .gameBoard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -74,23 +93,29 @@ text {
 
 .cubes {
     width: auto;
-  height: auto;
-  min-width: 30px;
-  min-height: 30px;
-  border-radius: 1rem;
-  font-size: max(4vw, 3rem);
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding-left: 1.6vw;
-  border: #5E5DF0 solid 2.5px;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  color: white;
+    height: auto;
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 1rem;
+    font-size: max(4vw, 3rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: #5E5DF0 solid 2.5px;
+    cursor: pointer;
 }
 
 .cubes:hover {
     transform: scale(1.1);
+}
+
+.player1 {
+    color: white;
+}
+
+.player2 {
+    color: black;
 }
 
 @media only screen and (max-width: 900px) {
